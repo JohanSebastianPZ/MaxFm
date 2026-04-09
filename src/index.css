@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Racing+Sans+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-mx-green: #00d440;
+  --color-mx-green-hover: #00a833;
+  --color-mx-yellow: #FFD200;
+  --color-mx-yellow-hover: #e0b800;
+  
+  --color-light-bg: #ffffff;
+  --color-light-alt: #f3f4f6;
+  --color-dark-text: #111827;
+  --color-gray-text: #4b5563;
+
+  --font-racing: 'Racing Sans One', sans-serif;
+  --font-base: 'Inter', sans-serif;
+
+  --shadow-mx-green: 0 4px 15px rgba(0, 212, 64, 0.3);
+  --shadow-mx-yellow: 0 4px 15px rgba(255, 210, 0, 0.3);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-text);
+    font-family: var(--font-base);
+    min-height: 100vh;
+  }
+  
+  ::selection {
+    background-color: var(--color-mx-green);
+    color: white;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .clip-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
