@@ -2,14 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Headphones } from 'lucide-react';
 
+import paola from '../assets/locutores/Paola.jpg'; 
+import jorge from '../assets/locutores/Jorge.webp'; 
+import locutorUno from '../assets/locutores/LocutorUno.jpg'; 
+import locutorDos from '../assets/locutores/LocutorDos.jpg'; 
+import locutorTres from '../assets/locutores/LocutorTres.webp'; 
+
 const DJs = () => {
   const djs = [
-    { name: 'JHONY MIX', program: 'EL VACILE', image: 'https://images.unsplash.com/photo-1571266028243-cb40fcece57a?q=80&w=1964&auto=format&fit=crop' },
-    { name: 'DJ KEVIN', program: 'URBAN BEATS', image: 'https://images.unsplash.com/photo-1616016142171-ec5bb3a23a31?q=80&w=1974&auto=format&fit=crop' },
-    { name: 'CHRIS SWAG', program: 'SALSÓDROMO', image: 'https://images.unsplash.com/photo-1520182205149-1e5e4e7329b4?q=80&w=1974&auto=format&fit=crop' },
-    { name: 'ALEX SOUND', program: 'NIGHT DRIVE', image: 'https://images.unsplash.com/photo-1542458428-21d3f57abf3c?q=80&w=1935&auto=format&fit=crop' },
-    { name: 'MARC BASS', program: 'MORNING BASS', image: 'https://images.unsplash.com/photo-1508614917696-22485f340882?q=80&w=2070&auto=format&fit=crop' },
-    { name: 'LEO FLOW', program: 'TOP HITS', image: 'https://images.unsplash.com/photo-1533663116543-1bc2ba67ac0a?q=80&w=1975&auto=format&fit=crop' },
+    { name: 'PAOLA', program: 'EL VACILE', image: paola },
+    { name: 'DJ KEVIN', program: 'URBAN BEATS', image: locutorUno},
+    { name: 'JORGE', program: 'SALSÓDROMO', image: jorge},
+    { name: 'ALEX SOUND', program: 'NIGHT DRIVE', image: locutorDos},
+    { name: 'MARC BASS', program: 'MORNING BASS', image: locutorTres},
   ];
 
   const containerVariants = {

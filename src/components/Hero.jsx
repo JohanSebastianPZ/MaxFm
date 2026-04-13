@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import heroImg1 from '../assets/hero-1.jpg';
-import heroImg2 from '../assets/hero-2.jpg';
+import heroImg1 from '../assets/hero/hero-1.jpg';
+import heroImg2 from '../assets/hero/hero-2.jpg';
 
 const Hero = () => {
   const slides = [
+    /*
     {
       id: 1,
       type: 'content',
@@ -14,9 +15,9 @@ const Hero = () => {
       title: 'LA REVOLUCION',
       highlight: 'MUSICAL',
       desc: 'Sintoniza el futuro. La mejor música urbana y hits exclusivos en la frecuencia más agresiva del dial.',
-    },
+    },*/
     {
-      id: 2,
+      id: 1,
       type: 'image-only',
       image: heroImg1,
     },
@@ -24,7 +25,7 @@ const Hero = () => {
       id: 3,
       type: 'image-only',
       image: heroImg2,
-    },
+    }/*,
     {
       id: 4,
       type: 'content',
@@ -33,7 +34,7 @@ const Hero = () => {
       title: 'FESTIVAL',
       highlight: 'NON-STOP',
       desc: 'Prepárate para la locura total del fin de semana. Sesiones ininterrumpidas de los mejores DJs del mundo.',
-    }
+    }*/
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +55,7 @@ const Hero = () => {
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentSlide}
-          className="absolute inset-0 w-full h-full"
+          className="relative w-full"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
@@ -65,7 +66,7 @@ const Hero = () => {
             <img
               src={slides[currentSlide].image}
               alt="Slide Background"
-              className={`w-full h-full object-cover ${slides[currentSlide].type === 'image-only' ? 'opacity-100' : 'opacity-80'}`}
+              className={`w-full h-auto block`}
             />
             {/* Dark gradient overlay to ensure text readability */}
             {slides[currentSlide].type === 'content' && (

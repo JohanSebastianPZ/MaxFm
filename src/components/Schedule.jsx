@@ -2,16 +2,22 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import cantinazo from '../assets/programacion/el_cantinazo.png'; 
+import vacile from '../assets/programacion/el_vacile.png'; 
+import alarma from '../assets/programacion/la_alarma.png'; 
+import pruebaVida from '../assets/programacion/pruebas_de_vida.png'; 
+import salsodromo from '../assets/programacion/salsodromo.png'; 
+
+
 const Schedule = () => {
   const scrollContainerRef = useRef(null);
 
   const programs = [
-    { id: 1, time: '06:00 - 10:00', title: 'MORNING BASS', dj: 'MARC BASS', status: 'past', image: 'https://images.unsplash.com/photo-1508614917696-22485f340882?q=80&w=2070&auto=format&fit=crop' },
-    { id: 2, time: '10:00 - 12:00', title: 'URBAN BEATS', dj: 'DJ KEVIN', status: 'past', image: 'https://images.unsplash.com/photo-1616016142171-ec5bb3a23a31?q=80&w=1974&auto=format&fit=crop' },
-    { id: 3, time: '12:00 - 16:00', title: 'EL VACILE', dj: 'JHONY MIX', status: 'live', image: 'https://images.unsplash.com/photo-1543604085-f12fb0503f7e?q=80&w=2070&auto=format&fit=crop', progress: 65 },
-    { id: 4, time: '16:00 - 20:00', title: 'SALSÓDROMO', dj: 'CHRIS SWAG', status: 'next', image: 'https://images.unsplash.com/photo-1520182205149-1e5e4e7329b4?q=80&w=1974&auto=format&fit=crop' },
-    { id: 5, time: '20:00 - 00:00', title: 'NIGHT DRIVE', dj: 'ALEX SOUND', status: 'next', image: 'https://images.unsplash.com/photo-1542458428-21d3f57abf3c?q=80&w=1935&auto=format&fit=crop' },
-    { id: 6, time: '00:00 - 06:00', title: 'AFTER HOURS', dj: 'AUTO', status: 'next', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop' }
+    { id: 1, time: '06:00 - 10:00', title: 'MORNING BASS', dj: 'MARC BASS', status: 'past', image: cantinazo},
+    { id: 2, time: '10:00 - 12:00', title: 'URBAN BEATS', dj: 'DJ KEVIN', status: 'past', image: vacile},
+    { id: 3, time: '12:00 - 16:00', title: 'EL VACILE', dj: 'JHONY MIX', status: 'live', image: alarma},
+    { id: 4, time: '16:00 - 20:00', title: 'SALSÓDROMO', dj: 'CHRIS SWAG', status: 'next', image: pruebaVida},
+    { id: 5, time: '20:00 - 00:00', title: 'NIGHT DRIVE', dj: 'ALEX SOUND', status: 'next', image: salsodromo}
   ];
 
   const scrollLeft = () => {

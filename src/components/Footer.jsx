@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube, FaTwitch } from 'react-icons/fa6';
-import logoImg from '../assets/logo-maxfm.png';
+import logoImg from '../assets/general/logo-maxfm.png';
 
 const Footer = () => {
   return (
